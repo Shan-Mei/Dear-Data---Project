@@ -11,14 +11,19 @@
  "Sat", "Sun"
  };
  
+ int[] dayPositions = {
+   75, 225, 375, 525, 675, 825, 975
+ };
+ 
  void setup (){
    size (1050, 840);
  }
- 
+  
  void draw (){
    
  }
  
  void keyPressed (){
+   
  }
  
