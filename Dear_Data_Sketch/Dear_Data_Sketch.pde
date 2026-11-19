@@ -9,6 +9,7 @@ Table data;
 
 // Array of objects
 ArrayList<DataPoint> points = new ArrayList<DataPoint>();
+int visiblePoints = 0;  // <-- keeps track of visible images, 0 = no images visible
 
 String[] days = {
   "Mon", "Tues", "Wed", "Thur", "Fri",
@@ -63,7 +64,16 @@ void draw () {
   background(#D6FBFC);
 
   //Display all data points
-  for (DataPoint point : points) {
+  for (int i = 0; i < visiblePoints; i++) {
+    DataPoint point = points.get(i);
     point.display();
   }
+}
+
+void keyPressed() {
+ 
+  if (visiblePoints < points.size()) {  // points.size = 106
+    visiblePoints++;
+  }
+  
 }
